@@ -1,0 +1,270 @@
+.card-header {
+    font-weight: 500;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+
+  .centered-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .content {
+    text-align: center;
+  }
+
+  .logo {
+    max-height: 50vh;
+    max-width: 30vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
+
+  .heading {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .paragraph {
+    margin-bottom: 20px;
+  }
+
+/* Breakpoint for desktops 1200px and larger */
+@media only screen and (min-width: 1200px) {
+
+    /* Your CSS rules for desktops */
+    .custom-container {
+        width: 70%;
+        margin: 0 auto;
+        /* Center the container horizontally */
+        /* Just for visualization */
+        padding: 20px;
+        /* Add some padding inside the container */
+    }
+
+    .custom-card {
+        color: #007bff;
+        margin: 10px;
+        width: calc(33.33% - 20px);
+        /* Set width for 3 columns with margin */
+    }
+
+    .card-header.blue {
+        background-color: #007bff;
+        color: gold;
+    }
+
+    .card-body.blue {
+        color: #007bff;
+    }
+
+    .card-header.gold {
+        background-color: gold;
+        color: #007bff;
+    }
+
+    .card-body.gold {
+        color: #007bff;
+    }
+
+
+
+    /* Custom CSS for the contact section */
+    .contact-section {
+        margin-top: 50px;
+
+    }
+
+    .contact-info {
+        padding: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .contact-info-column:hover {
+        background-color: #f0f0f0;
+    }
+}
+
+/* Breakpoint for tablets between 744px and 1199px */
+@media only screen and (min-width: 744px) and (max-width: 1199px) {
+
+    /* Your CSS rules for tablets */
+    .custom-container {
+        width: 90%;
+        margin: 0 auto;
+        /* Center the container horizontally */
+        /* background-color: #f0f0f0; */
+        /* Just for visualization */
+        padding: 20px;
+        /* Add some padding inside the container */
+    }
+
+    .custom-card {
+        color: #007bff;
+        margin: 10px;
+        width: calc(50% - 20px);
+        /* Set width for 3 columns with margin */
+    }
+
+    .card-header.mblue {
+        background-color: #007bff;
+        color: gold;
+    }
+
+    .card-body.mblue {
+        color: #007bff;
+    }
+
+    .card-header.mgold {
+        background-color: gold;
+        color: #007bff;
+    }
+
+    .card-body.mgold {
+        color: #007bff;
+    }
+
+    .contact-section {
+        margin-top: 30px;
+        padding-bottom: 50px;
+    }
+
+    .contact-info {
+        padding: 15px;
+    }
+}
+
+
+@media only screen and (max-width: 743px) {
+
+    /* Your CSS rules for mobile devices */
+    .custom-container {
+        width: 95%;
+        margin: 0 auto;
+        /* Center the container horizontally */
+        /* background-color: #f0f0f0; */
+        /* Just for visualization */
+        padding: 20px;
+        /* Add some padding inside the container */
+    }
+
+    .custom-card {
+        color: #007bff;
+        margin: 10px;
+        width: calc(100% - 20px);
+        /* Set width for 3 columns with margin */
+    }
+
+    .card-header.blue {
+        background-color: #007bff;
+        color: gold;
+    }
+
+    .card-body.blue {
+        color: #007bff;
+    }
+
+    .card-header.gold {
+        background-color: gold;
+        color: #007bff;
+    }
+
+    .card-body.gold {
+        color: #007bff;
+    }
+
+    .contact-section {
+        margin-top: 20px;
+    }
+
+    .contact-info {
+        text-align: center;
+        padding: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 400px;
+        /* Adjust width as needed */
+    }
+
+    /* Custom CSS for alternating header colors */
+    .card-header-blue {
+        background-color: #007bff;
+        /* Blue background */
+        color: #ffc107;
+        /* Gold text */
+    }
+
+    .card-header-gold {
+        background-color: #ffc107;
+        /* Gold background */
+        color: #007bff;
+        /* Blue text */
+    }
+}
+
+
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: gold;
+    color:  #007bff;
+    /* Set your desired background color */
+    padding: 20px 0;
+    text-align: center;
+}
+
+.navbarcolor {
+    background-color: #0D6EFD;
+}
+
+/* Style for nav-item within <li> */
+.navbar-nav li.nav-item {
+    margin-right: 15px;
+    /* Adjust spacing between nav items */
+}
+
+/* Style for nav-link within <a> */
+.navbar-nav li.nav-item a.nav-link {
+    color: gold;
+    /* Text color */
+    padding: 10px 15px;
+    font-weight: 600;
+    /* Padding */
+    text-decoration: none;
+    /* Remove default underline */
+}
+
+/* Style for nav-link within <a> on hover */
+.navbar-nav li.nav-item a.nav-link:hover {
+    /* Background color on hover */
+    color: #ffffff;
+    /* Text color on hover */
+}
+
+
+/* Custom CSS for the phone button */
+.phone-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.phone-button i {
+    margin-right: 5px;
+}
