@@ -54,6 +54,7 @@ body, html {
     .custom-container {
         width: 70%;
         margin: 0 auto;
+        background-color: black;
         /* Center the container horizontally */
         /* Just for visualization */
         padding: 20px;
@@ -161,6 +162,7 @@ body, html {
     .custom-container {
         width: 100%;
         margin: 0 auto;
+        background-color: black;
         /* Center the container horizontally */
         /* background-color: #f0f0f0; */
         /* Just for visualization */
