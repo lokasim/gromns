@@ -2,21 +2,25 @@
     font-weight: 500;
 }
 
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
     height: 100%;
+    width: 100%;
+    background-color: black !important;
     font-family: Arial, sans-serif;
-  }
-  
-  .heading{
-    color: #007bff;
-  }
-  .paragraph{
-    color: #007bff;
-  }
+}
 
-  .centered-section {
+.heading {
+    color: #007bff;
+}
+
+.paragraph {
+    color: #007bff;
+}
+
+.centered-section {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,28 +28,145 @@ body, html {
     max-width: 80%;
     margin-left: auto;
     margin-right: auto;
-  }
+    min-height: 580px;
+}
 
-  .content {
+.content {
     text-align: center;
-  }
 
-  .logo {
-    max-height: 50vh;
+}
+
+.content.main {
+    height: 100vh;
+    max-width: 80%;
+    min-height: 290px;
+}
+
+.logo {
+    height: 50vh;
     max-width: 30vw;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 20px;
-  }
+}
 
-  .heading {
-    font-size: 24px;
+.logo img {
+    height: 60vh;
+    max-width: 30vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.heading {
+    font-size: 30px;
     margin-bottom: 10px;
-  }
+    color: gold;
+}
 
-  .paragraph {
+.paragraph {
     margin-bottom: 20px;
-  }
+}
+
+#logoContainer {
+    width: 300px;
+    height: 75px;
+    position: relative;
+    margin-top: -15vh;
+}
+
+#topDiv,
+#bottomDiv {
+    position: absolute;
+    margin-left: 50px;
+    width: 100%;
+    height: 50%;
+    background-color: gold;
+    color: black;
+    overflow: hidden;
+}
+
+#topDiv {
+    top: 0;
+    transform: skew(-30deg);
+}
+
+#bottomDiv {
+    bottom: 0;
+    transform: skew(-30deg);
+}
+
+#innerContent {
+    transform: skew(30deg);
+    padding: 5px;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.caption {
+    color: gold;
+    font-weight: bold;
+    font-size: 35px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 2px solid #007bff;
+    border-bottom: 2px solid #007bff;
+}
+
+.containerLocation {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allows items to wrap to the next line */
+}
+
+.box {
+    flex: 1;
+    /* Each box takes up equal space */
+    padding: 0px;
+    margin: 20px;
+    height: 400px;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.title {
+    text-align: center;
+    font-weight: 20px;
+    font-size: 30px;
+    color: #ffc107;
+}
+
+.containerLocationList {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    /* Adjust width as needed */
+}
+
+.thunder-list {
+    list-style-type: none;
+    width: 100%;
+}
+
+.thunder-item {
+    margin-top: 20px;
+    color: white;
+    font-size: 20px;
+}
+
+.thunder-item::before {
+    content: "\26A1";
+    /* Unicode character for a star symbol (you can use any other Unicode or custom icon) */
+    margin-right: 5px;
+    color: #FFD700;
+    /* Color of thunder icon */
+}
+
 
 /* Breakpoint for desktops 1200px and larger */
 @media only screen and (min-width: 1200px) {
@@ -54,7 +175,6 @@ body, html {
     .custom-container {
         width: 70%;
         margin: 0 auto;
-        background-color: black;
         /* Center the container horizontally */
         /* Just for visualization */
         padding: 20px;
@@ -62,36 +182,57 @@ body, html {
     }
 
     .custom-card {
-        color: #007bff;
         margin: 10px;
         width: calc(33.33% - 20px);
         /* Set width for 3 columns with margin */
+        border-width: 2px !important;
+        border-color: gold !important;
+        border-radius: 0% !important;
     }
 
-    .card-header.blue {
-        background-color: #007bff;
-        color: gold;
-    }
-
-    .card-body.blue {
-        color: #007bff;
-    }
 
     .card-header.gold {
         background-color: gold;
-        color: #007bff;
+        font-weight: bold;
+        color: black;
+        border-radius: 0%;
     }
 
     .card-body.gold {
-        color: #007bff;
+        color: gold;
+        background-color: black;
+        border-radius: 0%;
     }
 
+    .custom-bullet {
+        list-style: none;
+        padding-left: 0;
+        color: #f0f0f0;
+    }
+
+    .custom-bullet li::before {
+        content: "\26A1";
+        font-size: 1.2em;
+        margin-right: 0.1em;
+    }
+
+    .custom-bullet.haus li::before {
+        content: "🛠️";
+    }
 
 
     /* Custom CSS for the contact section */
     .contact-section {
         margin-top: 50px;
+        color: white;
+    }
 
+    .custom-row {
+        width: calc(33.33% - 5px) !important;
+        /* Set width for 3 columns with margin */
+        border-width: 2px !important;
+        border-color: gold !important;
+        border-radius: 0% !important;
     }
 
     .contact-info {
@@ -101,8 +242,18 @@ body, html {
         cursor: pointer;
     }
 
+    .contact-info i {
+        margin-right: 10px;
+    }
+
+    .contact-info-column.border {
+        border-color: gold !important;
+        border-width: 3px !important;
+    }
+
     .contact-info-column:hover {
-        background-color: #f0f0f0;
+        background-color: gold;
+        color: black;
     }
 }
 
@@ -121,37 +272,77 @@ body, html {
     }
 
     .custom-card {
-        color: #007bff;
         margin: 10px;
         width: calc(50% - 20px);
         /* Set width for 3 columns with margin */
+        border-width: 2px !important;
+        border-color: gold !important;
+        border-radius: 0% !important;
     }
 
-    .card-header.mblue {
-        background-color: #007bff;
-        color: gold;
-    }
 
-    .card-body.mblue {
-        color: #007bff;
-    }
-
-    .card-header.mgold {
+    .card-header.gold {
         background-color: gold;
-        color: #007bff;
+        font-weight: bold;
+        color: black;
+        border-radius: 0%;
     }
 
-    .card-body.mgold {
-        color: #007bff;
+    .card-body.gold {
+        color: gold;
+        background-color: black;
+        border-radius: 0%;
     }
 
+    .custom-bullet {
+        list-style: none;
+        padding-left: 0;
+        color: #f0f0f0;
+    }
+
+    .custom-bullet li::before {
+        content: "\26A1";
+        font-size: 1.2em;
+        margin-right: 0.1em;
+    }
+
+    .custom-bullet.haus li::before {
+        content: "🛠️";
+    }
+
+    /* Custom CSS for the contact section */
     .contact-section {
-        margin-top: 30px;
-        padding-bottom: 50px;
+        margin-top: 50px;
+        color: white;
+    }
+
+    .custom-row {
+        width: calc(50% - 20px) !important;
+        /* Set width for 3 columns with margin */
+        border-width: 2px !important;
+        border-color: gold !important;
+        border-radius: 0% !important;
     }
 
     .contact-info {
-        padding: 15px;
+        padding: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .contact-info i {
+        margin-right: 10px;
+    }
+
+    .contact-info-column.border {
+        border-color: gold !important;
+        border-width: 3px !important;
+    }
+
+    .contact-info-column:hover {
+        background-color: gold;
+        color: black;
     }
 }
 
@@ -171,65 +362,162 @@ body, html {
     }
 
     .custom-card {
-        color: #007bff;
         margin: 10px;
         width: calc(100% - 20px);
         /* Set width for 3 columns with margin */
-    }
-
-    .card-header.blue {
-        background-color: #007bff;
-        color: gold;
-    }
-
-    .card-body.blue {
-        color: #007bff;
+        border-width: 2px !important;
+        border-color: gold !important;
+        border-radius: 0% !important;
     }
 
     .card-header.gold {
         background-color: gold;
-        color: #007bff;
+        font-weight: bold;
+        color: black;
+        border-radius: 0%;
     }
 
     .card-body.gold {
-        color: #007bff;
+        color: gold;
+        background-color: black;
+        border-radius: 0%;
     }
 
+    .custom-bullet {
+        list-style: none;
+        padding-left: 0;
+        color: #f0f0f0;
+    }
+
+    .custom-bullet li::before {
+        content: "\26A1";
+        font-size: 1.2em;
+        margin-right: 0.1em;
+    }
+
+    .custom-bullet.haus li::before {
+        content: "🛠️";
+    }
+
+
+    /* Custom CSS for the contact section */
     .contact-section {
-        margin-top: 20px;
+        margin-top: 50px;
+        color: white;
+    }
+
+    .custom-row {
+        width: calc(100% - 5px) !important;
+        /* Set width for 3 columns with margin */
+        border-width: 2px !important;
+        border-color: gold !important;
+        border-radius: 0% !important;
     }
 
     .contact-info {
-        text-align: center;
         padding: 10px;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 400px;
-        /* Adjust width as needed */
-    }
-
-    /* Custom CSS for alternating header colors */
-    .card-header-blue {
-        background-color: #007bff;
-        /* Blue background */
-        color: #ffc107;
-        /* Gold text */
-    }
-
-    .card-header-gold {
-        background-color: #ffc107;
-        /* Gold background */
-        color: #007bff;
-        /* Blue text */
-    }
-    .logo {
-        max-height: 100vh;
-        max-width: 70vw;
-        padding-bottom: 30px;
-        margin-left: auto;
-        margin-right: auto;
         margin-bottom: 20px;
-      }
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .contact-info i {
+        margin-right: 10px;
+    }
+
+    .contact-info-column.border {
+        border-color: gold !important;
+        border-width: 3px !important;
+    }
+
+    .contact-info-column:hover {
+        background-color: gold;
+        color: black;
+    }
+
+
+.logo {
+    height: 50vh;
+    max-width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo img {
+    height: 60vh;
+    max-width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.heading {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: gold;
+}
+
+.paragraph {
+    margin-bottom: 20px;
+}
+
+#logoContainer {
+    width: 250px;
+    height: 75px;
+    position: relative;
+    margin-top: -20vh;
+    margin-left: 5%;
+}
+
+#topDiv,
+#bottomDiv {
+    position: absolute;
+    margin-left: 50px;
+    width: 100%;
+    height: 50%;
+    background-color: gold;
+    color: black;
+    overflow: hidden;
+}
+
+#topDiv {
+    top: 0;
+    transform: skew(-30deg);
+}
+
+#bottomDiv {
+    bottom: 0;
+    transform: skew(-30deg);
+}
+
+#innerContent {
+    transform: skew(30deg);
+    padding: 5px;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+    .containerLocation {
+        height: 1000px;
+    }
+
+    .box {
+        flex: 1;
+        /* Each box takes up equal space */
+        padding: 20px;
+        margin: 20px;
+    }
+
+    iframe {
+        width: 100% !important;
+        height: 100% !important;
+        border: none;
+    }
+
+    .containerLocation {
+        flex-direction: column;
+        /* Stack items vertically on mobile */
+    }
 }
 
 
@@ -237,8 +525,7 @@ body, html {
     position: relative;
     bottom: 0;
     width: 100%;
-    background-color: gold;
-    color:  #007bff;
+    color: gold;
     /* Set your desired background color */
     padding: 20px 0;
     text-align: center;
@@ -284,4 +571,47 @@ body, html {
 
 .phone-button i {
     margin-right: 5px;
+}
+
+.rounded-pill {
+    color: black !important;
+    background-color: gold !important;
+    border-color: black !important;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.rounded-pill {
+    animation: pulse 1s infinite;
+}
+
+.slogan {
+    margin-top: -10vh;
+    color: rgb(242 226 161);
+    font-size: 20px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.heading {
+    margin-top: 50px;
+    color: #007bff font-size: 25px;
+    font-weight: bold;
+}
+
+.paragraph {
+    margin-top: 20px;
+    color: rgb(242 226 161);
 }
