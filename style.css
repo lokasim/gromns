@@ -435,6 +435,11 @@ iframe {
         color: black;
     }
 
+    .content.main {
+        position: relative;
+        height: 70vh;
+        max-width: 80%;
+    }
 
 .logo {
     height: 50vh;
@@ -444,16 +449,16 @@ iframe {
 }
 
 .logo img {
-    height: 60vh;
+    height: 40vh;
     max-width: 70vw;
     margin-left: auto;
     margin-right: auto;
 }
 
-.heading {
+h1.heading {
     font-size: 30px;
-    margin-bottom: 10px;
     color: gold;
+    margin-top: -50px;
 }
 
 .paragraph {
@@ -461,10 +466,10 @@ iframe {
 }
 
 #logoContainer {
-    width: 250px;
+    width: 260px;
     height: 75px;
     position: relative;
-    margin-top: -20vh;
+    margin-top: -10vh;
     margin-left: 5%;
 }
 
