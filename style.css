@@ -8,16 +8,18 @@ html {
     padding: 0;
     height: 100%;
     width: 100%;
+    min-width: 400px;
     background-color: black !important;
     font-family: Arial, sans-serif;
 }
 
 .heading {
-    color: #007bff;
+    color: gold;
 }
 
 .paragraph {
     color: #007bff;
+    color: rgb(242 226 161);
 }
 
 .centered-section {
@@ -37,21 +39,32 @@ html {
 }
 
 .content.main {
-    height: 100vh;
+    /* height: 100vh; */
     max-width: 80%;
     min-height: 290px;
+    display: flex;
+    flex-direction: column;
+}
+
+div.logo {
+    margin: 0px;
+    padding: 0px;
 }
 
 .logo {
-    height: 50vh;
-    max-width: 30vw;
+    flex: 0 0 auto;
+    padding: 20px;
+    margin-top: -20vh;
+    /* height: 50vh; */
+    /* max-width: 30vw; */
     margin-left: auto;
     margin-right: auto;
 }
 
 .logo img {
-    height: 60vh;
-    max-width: 30vw;
+    /* height: 40vh; */
+    /* width: 100%; */
+    /* max-width: 30vw; */
     margin-left: auto;
     margin-right: auto;
 }
@@ -66,17 +79,17 @@ html {
     margin-bottom: 20px;
 }
 
+
 #logoContainer {
-    width: 300px;
+    flex: 1;
+    width: 350px;
     height: 75px;
-    position: relative;
-    margin-top: -15vh;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #topDiv,
 #bottomDiv {
-    position: absolute;
-    margin-left: 50px;
     width: 100%;
     height: 50%;
     background-color: gold;
@@ -86,16 +99,16 @@ html {
 
 #topDiv {
     top: 0;
-    transform: skew(-30deg);
+    transform: skew(-22deg);
 }
 
 #bottomDiv {
     bottom: 0;
-    transform: skew(-30deg);
+    transform: skew(-22deg);
 }
 
 #innerContent {
-    transform: skew(30deg);
+    transform: skew(22deg);
     padding: 5px;
     font-size: 18px;
     font-style: italic;
@@ -171,7 +184,6 @@ iframe {
 /* Breakpoint for desktops 1200px and larger */
 @media only screen and (min-width: 1200px) {
 
-    /* Your CSS rules for desktops */
     .custom-container {
         width: 70%;
         margin: 0 auto;
@@ -190,6 +202,13 @@ iframe {
         border-radius: 0% !important;
     }
 
+    .content.main {
+        margin-top: -10vh;
+    }
+
+    .text {
+        margin-top: 5vh;
+    }
 
     .card-header.gold {
         background-color: gold;
@@ -344,6 +363,43 @@ iframe {
         background-color: gold;
         color: black;
     }
+
+    .content.main {
+        padding: 0px;
+        margin: 0px;
+        max-width: 100%;
+        margin-top: 10vh;
+    }
+
+    div.logo {
+        height: 50vh;
+        padding: 0px;
+        max-width: 100vw;
+        margin: 0px;
+        margin-top: -20vh;
+    }
+
+    .logo {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .logo img {
+        max-height: 300px;
+        max-width: 70vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* h1.heading {
+        font-size: 30px;
+        color: gold;
+        margin-top: -20vh;
+    }
+
+    .paragraph {
+        margin-bottom: 20px;
+    } */
 }
 
 
@@ -436,71 +492,82 @@ iframe {
     }
 
     .content.main {
-        position: relative;
-        height: 70vh;
-        max-width: 80%;
+        padding: 0px;
+        margin: 0px;
+        max-width: 100%;
+        margin-top: 10vh;
     }
 
-.logo {
-    height: 50vh;
-    max-width: 90vw;
-    margin-left: auto;
-    margin-right: auto;
-}
+    div.logo {
+        height: 50vh;
+        padding: 0px;
+        max-width: 100vw;
+        margin: 0px;
+        margin-top: -20vh;
+    }
 
-.logo img {
-    height: 40vh;
-    max-width: 70vw;
-    margin-left: auto;
-    margin-right: auto;
-}
+    .logo {
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-h1.heading {
-    font-size: 30px;
-    color: gold;
-    margin-top: -50px;
-}
+    .logo img {
+        max-height: 300px;
+        max-width: 70vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-.paragraph {
-    margin-bottom: 20px;
-}
+    .text {
+        margin-top: -10vh;
+    }
 
-#logoContainer {
-    width: 260px;
-    height: 75px;
-    position: relative;
-    margin-top: -10vh;
-    margin-left: 5%;
-}
+    /* h1.heading {
+        font-size: 30px;
+        color: gold;
+        margin-top: -20vh;
+    }
 
-#topDiv,
-#bottomDiv {
-    position: absolute;
-    margin-left: 50px;
-    width: 100%;
-    height: 50%;
-    background-color: gold;
-    color: black;
-    overflow: hidden;
-}
+    .paragraph {
+        margin-bottom: 20px;
+    } */
 
-#topDiv {
-    top: 0;
-    transform: skew(-30deg);
-}
+    /* #logoContainer {
+        width: 260px;
+        height: 75px;
+        position: relative;
+        margin-top: -10vh;
+        margin-left: 5%;
+    }
 
-#bottomDiv {
-    bottom: 0;
-    transform: skew(-30deg);
-}
+    #topDiv,
+    #bottomDiv {
+        position: absolute;
+        margin-left: 50px;
+        width: 100%;
+        height: 50%;
+        background-color: gold;
+        color: black;
+        overflow: hidden;
+    }
 
-#innerContent {
-    transform: skew(30deg);
-    padding: 5px;
-    font-size: 18px;
-    font-style: italic;
-    font-weight: bold;
-}
+    #topDiv {
+        top: 0;
+        transform: skew(-30deg);
+    }
+
+    #bottomDiv {
+        bottom: 0;
+        transform: skew(-30deg);
+    }
+
+    #innerContent {
+        transform: skew(30deg);
+        padding: 5px;
+        font-size: 18px;
+        font-style: italic;
+        font-weight: bold;
+    } */
 
     .containerLocation {
         height: 1000px;
@@ -610,13 +677,9 @@ h1.heading {
     font-weight: bold;
 }
 
-.heading {
-    margin-top: 50px;
-    color: #007bff font-size: 25px;
-    font-weight: bold;
+.box iframe div{
+    display: none !important;
 }
-
-.paragraph {
-    margin-top: 20px;
-    color: rgb(242 226 161);
-}
+.map-header {
+    display: none !important;
+  }
